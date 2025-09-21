@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  padding-bottom: 100px;
 }
 
 header {
@@ -10,6 +11,11 @@ header {
   padding: 15px 30px;
   background-color: white;
   border-bottom: 1px solid #eee;
+  z-index: 20;
+  top:0;
+  position: sticky;
+  height: 75px;
+  border-bottom: 2px solid #BF8143FF;
 }
 
 .logo {
@@ -77,13 +83,7 @@ nav ul li a {
 body {
   background-color: #f8f5f2;
 }
-header{
-  z-index: 20;
-  top:0;
-  position: sticky;
-  height: 75px;
-  border-bottom: 2px solid #BF8143FF;
-}
+
 .li:hover{
   padding-bottom: 5px;
   border-bottom: 2px solid #BF8143FF
@@ -119,15 +119,43 @@ header{
 .products {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  column-gap: 140px;
   justify-content: center;
 }
 .product img{
-  width: 160px; !important;
-  height: 160px; !important;
+  width: 200px; !important;
+  height: 200px; !important;
   border: 2px solid #d84315;
   border-radius: 8px;
+  object-fit: cover;
 }
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2c2c2c;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #c49b63;
+}
+
 .sticky{
   position: sticky;
   top: 174px;
@@ -175,6 +203,9 @@ h4{
 .products a:hover {
   color: #d84315;
   text-decoration: underline;
+}
+.bottom50{
+  margin-bottom: 50px;
 }
 
 
