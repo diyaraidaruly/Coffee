@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".has-tooltip").forEach(el => {
         el.addEventListener("mouseenter", () => {
             tooltip.textContent = el.dataset.tooltip;
-            const rect = el.getBoundingClientRect(); // элементтің орны
+            const rect = el.getBoundingClientRect();
             tooltip.style.left = rect.left + window.scrollX + rect.width / 2 - tooltip.offsetWidth / 2 + "px";
-            tooltip.style.top = rect.bottom + window.scrollY + 8 + "px"; // астына +8px
+            tooltip.style.top = rect.bottom + window.scrollY  + "px";
             tooltip.style.opacity = "1";
             tooltip.style.transform = "translateY(0)";
         });

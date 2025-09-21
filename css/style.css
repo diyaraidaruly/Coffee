@@ -129,6 +129,11 @@ body {
   border-radius: 8px;
   object-fit: cover;
 }
+.product img:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+  transform: scale(1.05);
+  transition: box-shadow 0.3s ease;
+}
 footer {
   position: fixed;
   bottom: 0;
