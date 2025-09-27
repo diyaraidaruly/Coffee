@@ -3,7 +3,12 @@ function showPage(pageId) {
     const page = document.getElementById(pageId);
     if (page) page.style.display = 'block';
 }
-document.addEventListener('DOMContentLoaded', () => showPage('about'));
+document.addEventListener('DOMContentLoaded', () => {
+    const aboutPage = document.getElementById('about');
+    if (aboutPage) {
+        showPage('about');
+    }
+});
 document.addEventListener("DOMContentLoaded", () => {
     const tooltip = document.createElement("div");
     tooltip.className = "tooltip-box";
