@@ -212,6 +212,18 @@ h4{
 .bottom50{
   margin-bottom: 50px;
 }
-
+.product{
+  margin: 20px;
+}
+button{
+  border-radius: 10px;
+  background-color: white;
+  border-color: #BF8143FF;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+#login{
+  padding: 0 10px
+}
 
 
