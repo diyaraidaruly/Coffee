@@ -83,10 +83,17 @@ nav ul li a {
 body {
   background-color: #f8f5f2;
 }
+.li{
+  padding: 5px 15px;
+}
 
 .li:hover{
-  padding-bottom: 5px;
-  border-bottom: 2px solid #BF8143FF
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  border-radius: 10%;
+  background-color: #bf8143;
+}
+.li:hover a {
+  color: white;
 }
 .tabs {
   width: 72%;
@@ -294,5 +301,80 @@ button{
   margin-top: 15px;
   display: none;
 }
+/* ---------- GLOBAL REFINEMENTS ---------- */
+body {
+  background-color: #faf6f2;
+  font-family: 'Poppins', sans-serif;
+  color: #3b2f2f;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Add smooth transitions to all interactive elements */
+a, button, img, .product {
+  transition: all 0.3s ease;
+}
+
+/* ---------- HEADER ENHANCEMENTS ---------- */
+header {
+  background: linear-gradient(90deg, #fff, #f5ede6);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+nav ul li a:hover {
+  color: #d2691e;
+  transform: translateY(-3px);
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+  border-radius: 8px;
+  padding: 10px 15px;
+  border: 2px solid #bf8143;
+  background-color: white;
+  color: #5b3b1e;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #bf8143;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.product {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transform: scale(1);
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.product img {
+  transition: transform 0.5s ease;
+}
+
+.product:hover img {
+  transform: scale(1.1);
+}
+
+footer {
+  background: linear-gradient(to right, #3e2723, #5d4037);
+  color: #f5f5f5;
+}
+
+footer a:hover {
+  color: #ffcc80;
+}
+
 
 

@@ -12,6 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const tooltip = document.createElement("div");
     tooltip.className = "tooltip-box";
+    tooltip.style.position = "absolute";
+    tooltip.style.background = "#333";
+    tooltip.style.color = "#fff";
+    tooltip.style.padding = "6px 10px";
+    tooltip.style.borderRadius = "6px";
+    tooltip.style.fontSize = "13px";
+    tooltip.style.pointerEvents = "none";
+    tooltip.style.transition = "opacity 0.2s ease, transform 0.2s ease";
+    tooltip.style.opacity = "0";
+    tooltip.style.zIndex = "1000";
     document.body.appendChild(tooltip);
 
     document.querySelectorAll(".has-tooltip").forEach(el => {
@@ -37,11 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener("submit", (event) => {
             event.preventDefault();
 
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-            const confirmPassword = document.getElementById("confirmPassword").value;
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const confirmPassword = document.getElementById("confirmPassword").value.trim();
 
-            // Email тексерісі
             if (!email.includes("@")) {
                 alert("Email must contain '@' symbol!");
                 return;
@@ -52,8 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Егер бәрі дұрыс болса:
             message.style.display = "block";
+            message.style.color = "green";
             message.textContent = "Registration form submitted successfully!";
             form.reset();
         });
